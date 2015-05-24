@@ -1,6 +1,9 @@
 
+
+
 ## This assignment is to write an R function that is able to cache potentially time-consuming computations. 
 ## It includes two functions "makeCacheMatrix" which creates a special matrix object and "cacheSolve" which computes the inverse of a matrix. 
+
 
 ## "makeCacheMatrix" function creates a special matrix object which can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
@@ -14,6 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
          getinv <- function() inverse
          return(list(set = set, get = get, setinv = setinv, getinv = getinv)) 
     } 
+
 
 
 ## "cacheSolve" function computes the inverse of the special matrix created by "makeCacheMatrix". 
@@ -31,6 +35,7 @@ cacheSolve <- function(x, ...) {
          x$setinv(inverse) 
          return(inverse) 
      } 
+
 
 
 ## Exam result
